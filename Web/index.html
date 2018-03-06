@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="icons/default.ico" id="favicon" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script src="scripts/deps.js"></script>
+    <script src="scripts/session.js"></script>
+    <script src="scripts/notifier.js"></script>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/console.js"></script>
+    <script src="scripts/console_coordinator.js"></script>
+    <script src="scripts/main.js"></script>
+    <title> kMVT::L!S (loading) </title>
+</head>
+
+<body id="body">
+    <div id="scrolldiv">
+        <table id="cons" style="padding: 1.5em;">
+            <tr>
+                <td>
+                    <table id="msg" style="display: none">
+                        <tr style="vertical-align: text-top;">
+                            <td class="colhead">
+                                <t id="msg_head" class="rowhead">
+                                </t>
+                            </td>
+                            <td id="msg_content">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table id="info" style="display: none">
+                        <tr style="vertical-align: text-top;">
+                            <td class="colhead">
+                                <t id="info_head" class="rowhead">
+                                </t>
+                            </td>
+                            <td id="info_content">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table id="err" style="display: none">
+                        <tr style="vertical-align: text-top;">
+                            <td class="colhead">
+                                <t id="err_head" class="rowhead">
+                                </t>
+                            </td>
+                            <td id="err_content">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table id="footer">
+        <tr>
+            <td>
+                <table id="foot_keyboard" style="padding-left: 10em; padding-right: 10em; display: none;">
+                    <tr>
+                        <td>
+                            <table style="width: 100%">
+                                <tr>
+                                    <td class="key" vkey shift="q">Q</td>
+                                    <td class="key" vkey shift="w">W</td>
+                                    <td class="key" vkey shift="e">E</td>
+                                    <td class="key" vkey shift="r">R</td>
+                                    <td class="key" vkey shift="t">T</td>
+                                    <td class="key" vkey shift="y">Y</td>
+                                    <td class="key" vkey shift="u">U</td>
+                                    <td class="key" vkey shift="i">I</td>
+                                    <td class="key" vkey shift="o">O</td>
+                                    <td class="key" vkey shift="p">P</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table style="padding-left: 2%; padding-right: 8%; width: 100%;">
+                                <tr>
+                                    <td class="key" vkey shift="a">A</td>
+                                    <td class="key" vkey shift="s">S</td>
+                                    <td class="key" vkey shift="d">D</td>
+                                    <td class="key" vkey shift="f">F</td>
+                                    <td class="key" vkey shift="g">G</td>
+                                    <td class="key" vkey shift="h">H</td>
+                                    <td class="key" vkey shift="j">J</td>
+                                    <td class="key" vkey shift="k">K</td>
+                                    <td class="key" vkey shift="l">L</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table style="padding-left: 6%; padding-right: 4%; width: 100%;">
+                                <tr>
+                                    <td class="key" vkey shift="z">Z</td>
+                                    <td class="key" vkey shift="x">X</td>
+                                    <td class="key" vkey shift="c">C</td>
+                                    <td class="key" vkey shift="v">V</td>
+                                    <td class="key" vkey shift="b">B</td>
+                                    <td class="key" vkey shift="n">N</td>
+                                    <td class="key" vkey shift="m">M</td>
+                                    <td class="key" vkey shift=";">,</td>
+                                    <td class="key" vkey shift=":">.</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table style="padding-left:4%; padding-right:6%; width: 100%">
+                                <tr>
+                                    <td id="foot_keyboard_vk_shift" class="key" style="width: 24.666%" title="Shift">&#8962;</td>
+                                    <td class="key" style="width: 42%" vkspace>space</td>
+                                    <td class="key" style="width: 11.11111111%" vkey shift="!">?</td>
+                                    <td class="key" style="width: 11.11111111%" vkey>'</td>
+                                    <td id="foot_keyboard_vk_hide" class="key" style="width: 11.11111111%;" title="Hide the on-screen keyboard">&#xe955;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td id="foot_showkeyboard" class="clickable" style="padding-right: 0.9em; display: none;" title="Show the on-screen keyboard">
+                                        <t style="font-size: 2em;">
+                                            &#xe955;
+                                        </t>
+                                    </td>
+                                    <td id="foot_newfriend" class="clickable" style="padding-right: 0.9em; display: none;" title="Look for another friend (ALT+SHIFT+N)">
+                                        <t style="font-size: 1.9em;">
+                                            &#xe915;
+                                        </t>
+                                    </td>
+                                    <td id="foot_language" class="clickable" style="display: none" title="Change language (ALT+SHIFT+L)">
+                                        <t style="font-size: 1.8em;">&#xe9ca;</t>
+                                        <t id="foot_language_text" style="font-size: 1.5em; padding-left: 0.13em;"></t>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td id="foot_contactme" class="clickable" style="float: right; text-align: right" title="Contact me">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <t style="font-size: 1em;">
+                                            kMVT::L!S v0.2 alpha<br>
+                                        </t>
+                                        <t style="font-size: 0.9em;">
+                                            created by Francesco Zoccheddu</t>
+                                    </td>
+                                    <td id="foot_logo" style="font-size: 3em; padding-left: 0.2em;">
+                                        &#xea34;
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

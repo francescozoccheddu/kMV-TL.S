@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "font"; 
+    src: url("font.ttf");
+}
+
+body {
+    font-family: "font", monospace;
+    background-color: hsla(0, 0%, 8%, 1);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    word-wrap: break-word;
+    cursor: default;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+body.blurred {
+    background-color: hsla(0, 0%, 7%, 1);
+    opacity: 0.8;
+}
+
+table, tr, td, tbody {
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONSOLE */
+
+#scrolldiv {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5em;
+    padding: 0;
+    margin: 0;
+}
+
+.colhead {
+    width: 2em;
+}
+
+/* CONSOLE > INFO */
+
+#info {
+    color: hsla(185, 50%, 60%, 1);
+}
+
+#info:hover {
+    color: hsla(185, 60%, 70%, 1);
+}
+
+.info_clickable {
+    cursor: pointer;            
+}
+
+.info_clickable:hover {
+    color: hsla(185, 100%, 85%, 1);
+}
+
+.info_clickable:active {
+    color: hsla(185, 30%, 60%, 1);
+}
+
+/* CONSOLE > MSG */
+
+#msg {
+    color: hsla(150, 50%, 60%, 1);
+}
+
+#msg:hover {
+    color: hsla(150, 60%, 70%, 1); 
+}
+
+/* CONSOLE > ERR */
+
+#err {
+    color: hsla(340, 50%, 60%, 1);
+}
+
+#err:hover {
+    color: hsla(340, 60%, 70%, 1); 
+}
+
+.err_clickable {
+    cursor: pointer;                   
+}
+
+.err_clickable:hover {
+    color: hsla(340, 100%, 85%, 1);
+}
+
+.err_clickable:active {
+    color: hsla(340, 30%, 60%, 1);
+}
+
+/* FOOTER */
+
+#footer {
+    position: fixed;
+    bottom:0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    padding-bottom: 0.75em;
+    padding-left: 1.3em;
+    padding-right: 1.1em;
+}
+
+#footer.aggressive {
+    background-color: hsla(0, 0%, 0%, 0.1);
+}
+
+.clickable {
+    color: hsla(0, 0%, 20%, 1);
+    cursor: pointer;    
+}
+
+.clickable:hover {
+    color: hsla(0, 0%, 25%, 1);
+}
+
+.clickable:active {
+    color: hsla(0, 0%, 15%, 1);
+}
+
+/* FOOTER > KEYBOARD */
+
+#foot_keyboard {
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.key {
+    color: hsla(0, 0%, 20%, 1);
+    text-align: center;
+    font-size: 2em;
+    padding: 0.1em;
+
+}
+
+.key:hover {
+    background-color: hsla(0, 0%, 0%, 0.2); 
+    color: hsla(0, 0%, 25%, 1);
+}
+
+.key:active {
+    color: hsla(0, 0%, 15%, 1);
+}
